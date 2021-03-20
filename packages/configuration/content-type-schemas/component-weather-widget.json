@@ -1,0 +1,5 @@
+{
+    "body": "../content-schemas/component-weather-widget.json",
+    "schemaId": "https://anyafinn.dev/component-weather-widget.json",
+    "validationLevel": "CONTENT_TYPE"
+}

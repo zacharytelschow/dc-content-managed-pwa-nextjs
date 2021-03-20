@@ -1,0 +1,5 @@
+{
+    "body": "../content-schemas/component-card-list.json",
+    "schemaId": "https://anyafinn.dev/component-card-list.json",
+    "validationLevel": "CONTENT_TYPE"
+}

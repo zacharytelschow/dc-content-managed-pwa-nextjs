@@ -1,0 +1,77 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "https://anyafinn.dev/component-weather-widget.json",
+
+	"title": "Weather Widget",
+	"description": "",
+
+	"allOf": [
+		{
+			"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+		}
+	],
+	
+	"type": "object",
+	"properties": {
+		"component": {
+			"type": "string",
+			"const": "WeatherWidget"
+		},
+		"title": {
+			"type": "string",
+			"title": "Title"
+        },
+        "latitude": {
+			"title": "Latitude",
+			"type": "number",
+			"minimum": -90,
+			"maximum": 90
+        },
+        "longitude": {
+			"title": "Longitude",
+			"type": "number",
+			"minimum": -180,
+			"maximum": 180
+		},        
+        "excludeCurrentWeather": {
+			"title": "Exclude Current Weather",
+			"type": "boolean"
+        },
+        "excludeMinutelyWeather": {
+			"title": "Exclude Minutely Weather",
+			"type": "boolean"
+        },
+        "excludeHourlyWeather": {
+			"title": "Exclude Hourly Weather",
+			"type": "boolean"
+        },
+        "excludeDailyWeather": {
+			"title": "Exclude Daily Weather",
+			"type": "boolean"
+        },
+        "excludeWeatherAlerts": {
+			"title": "Exclude Weather Alerts",
+			"type": "boolean"
+        },
+        "units": {
+			"title": "Unit of Measure",
+            "type": "string",
+			"enum": [
+				"Standard",
+				"Metric",
+				"Imperial"
+			]
+        },
+        "apiKey": {
+			"type": "string",
+			"title": "API Key"
+        }
+	},
+	
+    "propertyOrder": ["component", "title", "latitude", "longitude", "excludeCurrentWeather", 
+        "excludeMinutelyWeather", "excludeHourlyWeather", "excludeDailyWeather", 
+        "excludeWeatherAlerts", "units", "apiKey"],
+    
+    "definitions": {
+    }
+}

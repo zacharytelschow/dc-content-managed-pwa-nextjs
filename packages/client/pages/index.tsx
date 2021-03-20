@@ -11,6 +11,8 @@ import Footer from '../components/Footer';
 import EditorialBlock from '../components/EditorialBlock';
 import HeroBannerBlock from '../components/HeroBannerBlock';
 import GalleryBlock from '../components/GalleryBlock';
+import CardList from '../components/CardList';
+import WeatherWidget from '../components/WeatherWidget';
 import Sidebar from '../components/Sidebar';
 import { fetchContent } from '../utils/fetchContent';
 
@@ -90,6 +92,12 @@ const Index: NextPage<Props> = (props: Props) => {
                         break;
                     case 'GalleryBlock':
                         ComponentType = GalleryBlock;
+                        break;
+                    case 'CardList':
+                        ComponentType = CardList;
+                        break;
+                    case 'WeatherWidget':
+                        ComponentType = WeatherWidget;
                         break;
                 }
                 
