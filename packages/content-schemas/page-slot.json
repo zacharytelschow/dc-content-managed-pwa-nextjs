@@ -27,7 +27,8 @@
 									"https://anyafinn.dev/component-editorial-block.json",
 									"https://anyafinn.dev/component-gallery-block.json",
 									"https://anyafinn.dev/component-card-list.json",
-									"https://anyafinn.dev/component-weather-widget.json"
+									"https://anyafinn.dev/component-weather-widget.json",
+									"https://anyafinn.dev/component-nested-content.json"
 								]
 							}
 						}

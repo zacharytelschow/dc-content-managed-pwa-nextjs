@@ -82,7 +82,7 @@ const WeatherWidget: React.SFC<Props> = (props) => {
         const fetchWeather = async () => {
             const result = await fetch(url);
             const body = await result.json();
-            console.log(body);
+
             setWeatherData(body);
         }
         fetchWeather();        

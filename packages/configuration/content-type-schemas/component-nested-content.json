@@ -1,0 +1,5 @@
+{
+    "body": "../content-schemas/component-nested-content.json",
+    "schemaId": "https://anyafinn.dev/component-nested-content.json",
+    "validationLevel": "CONTENT_TYPE"
+}

@@ -13,6 +13,7 @@ import HeroBannerBlock from '../components/HeroBannerBlock';
 import GalleryBlock from '../components/GalleryBlock';
 import CardList from '../components/CardList';
 import WeatherWidget from '../components/WeatherWidget';
+import NestedContent from '../components/NestedContent';
 import Sidebar from '../components/Sidebar';
 import { fetchContent } from '../utils/fetchContent';
 
@@ -98,6 +99,9 @@ const Index: NextPage<Props> = (props: Props) => {
                         break;
                     case 'WeatherWidget':
                         ComponentType = WeatherWidget;
+                        break;
+                    case 'NestedContent':
+                        ComponentType = NestedContent;
                         break;
                 }
                 
