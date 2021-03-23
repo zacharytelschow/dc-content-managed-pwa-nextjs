@@ -1,0 +1,78 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "https://anyafinn.dev/component-nested-content.json",
+
+	"title": "Nested Content Component",
+	"description": "",
+
+	"allOf": [
+		{
+			"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+		}
+	],
+	
+	"type": "object",
+	"properties": {
+		"component": {
+			"type": "string",
+			"const": "NestedContent"
+        },
+        "title": {
+			"type": "string",
+			"title": "Title"
+        },
+        "content": {
+			"title": "Content",
+			"type": "array",
+			"items": {
+				"allOf": [
+					{ "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link" },
+					{
+						"properties": {
+							"contentType": {
+								"enum": [
+									"https://anyafinn.dev/component-hero-banner-block.json",
+									"https://anyafinn.dev/component-editorial-block.json",
+									"https://anyafinn.dev/component-gallery-block.json",
+									"https://anyafinn.dev/component-card-list.json",
+									"https://anyafinn.dev/component-weather-widget.json"
+								]
+							}
+						}
+					}
+				]
+			}
+        },
+        "children": {
+			"title": "Children",
+			"type": "array",
+			"items": {
+				"allOf": [
+					{ "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link" },
+					{
+						"properties": {
+							"contentType": {
+								"enum": [
+									"https://anyafinn.dev/component-nested-content.json"
+								]
+							}
+						}
+					}
+				]
+			}
+		},
+        "layout": {
+			"title": "Layout",
+            "type": "string",
+			"enum": [
+				"Row",
+				"Column"
+			]
+        }
+	},
+	
+    "propertyOrder": ["component", "title", "content", "children", "layout"],
+    
+    "definitions": {
+    }
+}
