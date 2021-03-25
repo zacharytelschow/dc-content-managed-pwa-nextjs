@@ -36,8 +36,6 @@ interface Props extends WithStyles<typeof styles> {
 }
 
 const NestedContent: React.SFC<Props> = (props) => {
-    console.log('Props:');
-    console.log(props);
     const {
         classes,
         title,
@@ -49,16 +47,10 @@ const NestedContent: React.SFC<Props> = (props) => {
 
     return (
         <Section variant={SectionVariant.CONTAINED} {...other}>
-            <h1>Nested Content</h1>
             <div className={layout === 'Row' ? 'layout-row' : 'layout-column'}>
-
                 {
-                    content.map((item, index) => {
-                        //render content
+                    content.map(item => { //render content
                         let ComponentType = null;
-
-                        console.log('Found content [index ' + index + '].');
-                        console.log('Never getting here.');
 
                         switch (item.component) {
                             case 'HeroBannerBlock':
@@ -71,11 +63,9 @@ const NestedContent: React.SFC<Props> = (props) => {
                                 ComponentType = GalleryBlock;
                                 break;
                             case 'CardList':
-                                console.log('Card List found.');
                                 ComponentType = CardList;
                                 break;
                             case 'WeatherWidget':
-                                console.log('Weather Widget found.');
                                 ComponentType = WeatherWidget;
                                 break;
                         }
@@ -85,12 +75,9 @@ const NestedContent: React.SFC<Props> = (props) => {
                 }
 
                 {
-                    children.map((child, index) => {
-                        //render children
-                        console.log('Found child [index ' + index + '].');
-                        console.log(child);
+                    children.map(child => { //render children                        
                         return <NestedContent {...child} />;
-                    })                
+                    })
                 }
 
             </div>
