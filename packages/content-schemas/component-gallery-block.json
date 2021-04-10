@@ -36,6 +36,10 @@
 						"type": "string",
 						"title": "Title"
 					},
+					"text": {
+						"type": "string",
+						"title": "Text"
+					},
 					"callToAction": {
 						"type": "string",
 						"title": "Call to action"
@@ -45,7 +49,7 @@
 						"title": "Call to action hyperlink"
 					}
 				},
-				"propertyOrder": ["title", "description", "callToAction", "callToActionHref"]
+				"propertyOrder": ["title", "text", "description", "callToAction", "callToActionHref"]
 			}
 		}
 	},
