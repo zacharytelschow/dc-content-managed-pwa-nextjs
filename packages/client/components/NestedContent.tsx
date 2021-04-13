@@ -46,7 +46,7 @@ const NestedContent: React.SFC<Props> = (props) => {
     } = props;
 
     return (
-        <Section variant={SectionVariant.CONTAINED} {...other}>
+        <Section variant={SectionVariant.DEFAULT} {...other}>
             <div className={layout === 'Row' ? 'layout-row' : 'layout-column'}>
                 {
                     content.map(item => { //render content
